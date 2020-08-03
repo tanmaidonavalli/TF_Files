@@ -7,14 +7,9 @@ variable "AMIS" {
     }
   
 }
-variable "AWS_ACCESS_KEY" {
-    default= ""
-} 
-
-variable AWS_SECRET_KEY {
-    default= ""
+variable "profile" {
+   description = "AWS credentials profile you want to use"
 }
-
 variable "AWS_REGION" {
     default = "us-east-1"
 }
