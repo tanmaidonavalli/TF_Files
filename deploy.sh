@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-git clone https://github.com/tanmaidonavalli/TF_Files/DockerFile
+https://github.com/tanmaidonavalli/TF_Files/blob/master/Dockerfile
 
 #Build Image
 $docker build -t tfimage:latest .
