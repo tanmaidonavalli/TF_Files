@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-git clone docker shell script
+git clone https://github.com/tanmaidonavalli/TF_Files/DockerFile
 
 #Build Image
 $docker build -t tfimage:latest .
