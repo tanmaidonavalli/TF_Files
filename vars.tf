@@ -1,14 +1,7 @@
-variable "access_key" {
+variable "profile" {
    description = "AWS credentials profile you want to use"
-   type        = "string"
-   default     = ""
+   default = ""
 }
-
-variable "secret_key" {
- description = "AWS secretkey"
-   type        = "string"
-  default     = ""
- }
 
 variable "AMIS" {
     type = "map"
