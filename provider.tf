@@ -1,6 +1,7 @@
 provider "aws"{
     region = "us-east-1" 
-    profile = "${var.aws_profile}"
+    access_key = var.credentials.access_key
+    secret_key = var.credentials.secret_key
 }
 
 
