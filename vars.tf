@@ -1,6 +1,6 @@
 variable "profile" {
    description = "AWS credentials profile you want to use"
-   default = ""
+   default = "terrra"
 }
 
 variable "AMIS" {
