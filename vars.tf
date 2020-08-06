@@ -1,6 +1,8 @@
-variable "profile" {
+variable "access_key" {
    description = "AWS credentials profile you want to use"
 }
-variable "AWS_REGION" {
-    default = "us-east-1"
-}
+
+variable "secret_key" {
+ description ="AWS secretkey"  
+ }
+
