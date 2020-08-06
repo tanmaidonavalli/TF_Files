@@ -1,6 +1,6 @@
 provider "aws"{
     region = "us-east-1" 
-    profile = "master"
+    profile = "${var.aws_profile}"
 }
 
 
