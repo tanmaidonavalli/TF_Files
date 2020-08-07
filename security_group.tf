@@ -1,5 +1,5 @@
-resource "aws_security_group" "terra" {
-  name        = "terra"
+resource "aws_security_group" "terraform" {
+  name        = "terraform"
   description = "Allow SSH"
   
 
