@@ -1,5 +1,5 @@
-resource "aws_security_group" "tf-sg" {
-  name        = "tf-sg"
+resource "aws_security_group" "tf" {
+  name        = "tfstate"
   description = "Allow SSH"
   
 
@@ -16,9 +16,5 @@ resource "aws_security_group" "tf-sg" {
     to_port     = 22
     protocol    = "TCP"
     cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  tags = {
-    Name = "tf-sg"
   }
 }
