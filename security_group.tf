@@ -1,5 +1,5 @@
-resource "aws_security_group" "tf-sg" {
-  name        = "tf-sg"
+resource "aws_security_group" "tf" {
+  name        = "tf"
   description = "Allow SSH"
   
 
