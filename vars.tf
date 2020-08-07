@@ -18,8 +18,7 @@ variable "aws_secret_key" {
   description = "AWS secret key"
 }
 
-variable "aws_region" {
-  type = string
-  description = "AWS region"
+variable "AWS_REGION" {
+    default = "us-east-1"
 }
 
