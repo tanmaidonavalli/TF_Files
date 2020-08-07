@@ -1,5 +1,5 @@
-resource "aws_security_group" "tf" {
-  name        = "tf"
+resource "aws_security_group" "terra" {
+  name        = "terra"
   description = "Allow SSH"
   
 
