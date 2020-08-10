@@ -1,10 +1,10 @@
 
-filename="/root/TFCode/TF_Files/log.txt"
+#!/bin/bash
 
-while IFS= read -r line; do
-            #If the line starts with ST then set var to yes.
-                if [[ $line == FAILURE ]] ; then
+filename='demo.txt'
 
-                                        # Just t make each line start very clear, remove in use.
-                                                echo "Failure"
-                                                    fi
+
+if grep -Rw 'demo.txt' -e 'FAILURE'
+then
+          echo "I found 'FAILURE' word in LOG"
+    fi
