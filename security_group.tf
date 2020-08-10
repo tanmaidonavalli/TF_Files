@@ -1,5 +1,5 @@
-resource "aws_security_group" "demo" {
-  name        = "demo"
+resource "aws_security_group" "demos" {
+  name        = "demos"
   description = "Allow SSH"
   
 
