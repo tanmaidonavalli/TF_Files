@@ -1,14 +1,12 @@
 #!/bin/bash
 
-read -a FAILURE <  log.txt
-for line in "${FAILURE[@]}"; do
 
-#for line in "${FAILURE[@]}"; do
-#echo "Failure happening"
- #done
- 
- printf "Failure"
- done
+filename="log.txt"
+while IFS= read -r line; do
+    [[ $line == FAILURE ]]       && printline="yes"
+    [[ $printline == "yes" ]] && echo "$line"
+    
+done < "$filename"
  
 
  
