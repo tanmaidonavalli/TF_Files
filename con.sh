@@ -1,4 +1,4 @@
-isInFile=$(cat log.txt | grep -c "FAILURE")
+isInFile=$(cat log.txt | grep -c "FAI")
 
 
 if [ $isInFile -eq 0 ]; then
