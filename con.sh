@@ -1,13 +1,11 @@
-    #!/bin/bash
-filename="log.txt"
+isInFile=$(cat log.txt | grep -c "FAILURE")
 
-readarray -t lines <<< "$(sed -n '/FAIL*/,/Fai/p' "$filename")"
 
-for line in "${lines[@]}"; do
-
-     : # Do all your additional processing here, with a clean input.
- echo "Failure"
-done 
+if [ $isInFile -eq 0 ]; then
+   string not contained in file
+else
+   string is in file at least once
+fi
  
 
  
