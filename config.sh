@@ -10,3 +10,5 @@ while IFS= read -r line; do
         # Just t make each line start very clear, remove in use.
         echo "FAILURE IS IN LOG"
     fi
+    
+    done < "$filename"
