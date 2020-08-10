@@ -1,12 +1,13 @@
-#!/bin/bash
-
-
+    #!/bin/bash
 filename="log.txt"
-while IFS= read -r line; do
-    [[ $line == FAILURE ]]       && printline="yes"
-    [[ $printline == "yes" ]] && echo "$line"
-    
-done < "$filename"
+
+readarray -t lines <<< "$(sed -n '/FAIL*/,/Fai/p' "$filename")"
+
+for line in "${lines[@]}"; do
+
+     : # Do all your additional processing here, with a clean input.
+ echo "Failure"
+done 
  
 
  
