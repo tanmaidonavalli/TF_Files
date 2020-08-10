@@ -1,10 +1,12 @@
-isInFile=$(cat log.txt | grep -c "FAI")
+isInFile=$(cat log.txt | grep -c "FAI*")
 
 
-if [ $isInFile -eq 0 ]; then
-   echo "string not contained in file"
+if [ $isInFile -eq FAI* ]; then
+   echo "Failure STATUS"
+   exit 1
 else
-   echo "string is in file at least once"
+   if [ $isInFile -eq WAR* ];
+   echo "Warning message for code"
 fi
  
 
