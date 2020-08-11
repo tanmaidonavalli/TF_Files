@@ -1,3 +1,22 @@
+
+#!/bin/bash
+
+declare file="log.txt"
+declare regex="WARN"
+file_content=$( cat "${file}" )
+
+if [[ " $file_content " =~ $regex ]]
+then
+ 
+ 
+echo "warning" 
+
+fi
+
+exit
+
+
+
 #isInFile=$(cat log.txt | grep -c "FAI*")
 
 
@@ -16,23 +35,14 @@
 #else
   # code for if it does not exist
 #  echo "noooo"
-#fi  
-
+#fi 
 #!/bin/bash
+#read -a FAILURE <  log.txt
+#for line in "${FAILURE[@]}"; do
+#echo "Failure happening"
+ #done
 
-declare file="log.txt"
-declare regex="WARN"
-file_content=$( cat "${file}" )
 
-if [[ " $file_content " =~ $regex ]]
-then
- 
- 
-echo "warning" | tee ex.txt
-
-fi
-
-exit
 #else
         #echo "checking failure"
 
