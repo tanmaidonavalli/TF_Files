@@ -1,6 +1,6 @@
 
 #!/bin/bash
-
+config-lint -terraform . >log.txt
 if [[ "$(cat log.txt | grep -c "FAILURE")" -ne 0 ]]; then
               echo "failure"
  exit
