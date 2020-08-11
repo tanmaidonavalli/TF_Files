@@ -10,6 +10,7 @@ if [[ "$(cat log.txt | grep -c "FAILURE")" -ne 0 ]]; then
           echo "warning seen in log file. Please check the code"
  else
           echo "wohooo"
+  exit
   fi
 
 
