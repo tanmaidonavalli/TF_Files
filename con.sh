@@ -26,10 +26,9 @@ file_content=$( cat "${file}" )
 
 if [[ " $file_content " =~ $regex ]]
 then
- echo "Hello World"
-exec > script.log 2>&1
  
-
+ 
+echo "warning" | tee ex.txt
 
 fi
 
