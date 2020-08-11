@@ -3,7 +3,7 @@
 config-lint -terraform . >log.txt
 if [[ "$(cat log.txt | grep -c "FAILURE")" -ne 0 ]]; then
               echo "failure seen in log file exiting"
- exit1
+ exit
  fi
 
  if [[ "$(cat log.txt | grep -c "WARNING")" -ne 0 ]]; then
