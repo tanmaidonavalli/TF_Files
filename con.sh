@@ -28,7 +28,9 @@ if [[ " $file_content " =~ $regex ]]
 then
  echo "found warning deprecated"
 
+fi
 
+exit
 #else
         #echo "checking failure"
 
