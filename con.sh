@@ -1,19 +1,35 @@
 
 #!/bin/bash
 
-declare file="log.txt"
-declare regex="WARN"
-file_content=$( cat "${file}" )
+if [[ "$(cat log.txt | grep -c "FAILURE")" -ne 0 ]]; then
+              echo "failure"
+ exit
+ fi
 
-if [[ " $file_content " =~ $regex ]]
-then
+ if [[ "$(cat log.txt | grep -c "WARNING")" -ne 0 ]]; then
+          echo "warning"
+ else
+          echo "bad"
+  fi
+
+
+
+
+#!/bin/bash
+
+#declare file="log.txt"
+#declare regex="WARN"
+#file_content=$( cat "${file}" )
+
+#if [[ " $file_content " =~ $regex ]]
+#then
  
  
-echo "warning" 
+#echo "warning" 
 
-fi
+#fi
 
-exit
+#exit
 
 
 
