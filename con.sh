@@ -26,7 +26,7 @@ file_content=$( cat "${file}" )
 
 if [[ " $file_content " =~ $regex ]]
 then
- echo -e "found warning deprecated" > demo.txt
+ echo "found deprecated" >demo.txt
  
 
 
