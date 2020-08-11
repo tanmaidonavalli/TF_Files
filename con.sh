@@ -9,7 +9,7 @@ if [[ "$(cat log.txt | grep -c "FAILURE")" -ne 0 ]]; then
  if [[ "$(cat log.txt | grep -c "WARNING")" -ne 0 ]]; then
           echo "warning"
  else
-          echo "bad"
+          echo "wohooo"
   fi
 
 
