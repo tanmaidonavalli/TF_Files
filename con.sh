@@ -2,14 +2,14 @@
 #!/bin/bash
 config-lint -terraform . >log.txt
 if [[ "$(cat log.txt | grep -c "FAILURE")" -ne 0 ]]; then
-              echo "Failure seen in log file exiting"
+              echo "$(tput setaf 1)Failure seen in log file exiting"
  exit 1
  fi
 
  if [[ "$(cat log.txt | grep -c "WARNING")" -ne 0 ]]; then
-          echo "Warning seen in log file. Please check the code"
+          echo "$(tput setaf 1)Warning seen in log file. Please check the code"
  else
-          echo "Wohooo no errors in config-lint log"
+          echo "$(tput setaf 1)Wohooo no errors in config-lint log"
   
   fi
 
