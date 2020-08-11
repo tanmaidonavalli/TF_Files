@@ -1,6 +1,5 @@
 #!/bin/bash
 terraform init &&
-chmod 755 con.sh && ./con.sh &&
 config-lint -terraform . >log.txt
 if [[ "$(cat log.txt | grep -c "FAILURE")" -ne 0 ]]; then
               echo "$(tput setaf 3)Failure seen in log file exiting"
