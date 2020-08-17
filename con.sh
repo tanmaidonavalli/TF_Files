@@ -3,7 +3,7 @@ terraform workspace new demo
 terraform init &&
 config-lint -terraform . | tee -a "log.txt"
 if [[ "$(cat log.txt | grep -c "FAILURE")" -ne 0 ]]; then
-              echo "Failure seen in log file exiting"
+              echo "Failure seen in config-lint log file"
  exit 1
  fi
 
