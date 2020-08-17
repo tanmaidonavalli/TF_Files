@@ -3,14 +3,14 @@ terraform workspace new demo
 terraform init &&
 config-lint -terraform . >log.txt
 if [[ "$(cat log.txt | grep -c "FAILURE")" -ne 0 ]]; then
-              echo "$(tput setaf 3)Failure seen in log file exiting"
+              echo "Failure seen in log file exiting"
  exit 1
  fi
 
  if [[ "$(cat log.txt | grep -c "WARNING")" -ne 0 ]]; then
-          echo "$(tput setaf 3)Warning seen in log file. Please check the code"
+          echo "Warning seen in log file. Please check the code"
  else
-          echo "$(tput setaf 3)Wohooo no errors in config-lint log"
+          echo "Wohooo no errors in config-lint log"
   
   fi
  terraform plan 
