@@ -7,7 +7,7 @@ provider "aws" {
 resource "aws_instance" "instance1" {
   #count = 2
   ami = "${lookup(var.AMIS, var.AWS_REGION)}"
-  instance_type = ""
+  instance_type = "dd"
     
 
   tags = {
