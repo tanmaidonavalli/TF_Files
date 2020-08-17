@@ -32,3 +32,6 @@ variable “workspace_to_environment_map” {
   }
 }
 
+variable “environment” {
+  description = “The cluster deployment environment”
+}
