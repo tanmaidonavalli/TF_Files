@@ -22,3 +22,13 @@ variable "AWS_REGION" {
     default = "us-east-1"
 }
 
+variable “workspace_to_environment_map” {
+  type = “map”
+  default = {
+    dev     = “dev”
+    qa      = “qa”
+    staging = “staging”
+    prod    = “prod”
+  }
+}
+
