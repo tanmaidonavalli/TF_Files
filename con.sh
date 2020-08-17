@@ -1,5 +1,5 @@
 #!/bin/bash
-#terraform workspace new demo
+terraform workspace new demo
 terraform init &&
 config-lint -terraform . | tee -a "log.txt"
 if [[ "$(cat log.txt | grep -c "FAILURE")" -ne 0 ]]; then
