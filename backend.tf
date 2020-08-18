@@ -14,3 +14,14 @@ data "terraform_remote_state" "state" {
     dynamodb_table = "${var.project_name}"
   }
 }
+
+resource "aws_dynamodb_table" "dynamodb-terraform-state-lock" {
+ name = "${var.project_name}"
+  hash_key = "LockID"
+  read_capacity = 20
+  write_capacity = 20
+attribute {
+    name = "LockID"
+    type = "S"
+  }
+}
