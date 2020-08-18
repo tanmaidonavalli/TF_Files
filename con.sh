@@ -7,7 +7,7 @@
  terraform validate
  terraform plan -out="app1-dev.tfplan
  terraform apply "app1-dev.tfplan"
-rm -f "app1-dev.tfplan"
+
 
 
 
