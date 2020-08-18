@@ -1,8 +1,6 @@
 #!/bin/bash
  set -x
  set -e
- ENV="${1}"
- EXEC="${2}"
  terraform init 
  config-lint -terraform .
  terraform workspace new "${ENV}" 
