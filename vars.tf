@@ -11,10 +11,10 @@ variable "AMIS" {
 variable "workspace_to_environment_map" {
   type = "map"
   default = {
-    dev     = "dev"
-    qa      = "qa"
-    staging = "staging"
-    prod    = "prod"
+    dev     = "app1-dev"
+    qa      = "app1-qa"
+    staging = "app1-staging"
+    prod    = "app1-prod"
   }
 }
 
