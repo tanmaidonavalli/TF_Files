@@ -31,12 +31,12 @@ attribute {
 terraform {
   backend "s3" {
     
-    bucket         = "$(var.project_name)"
+    bucket         = "${var.project_name}"
     key            = "terraform.tfstate"
     region         = "us-east-1"
     dynamodb_table = "terraform-up-and-running-locks"
     encrypt        = true
-    access_key = "$var.aws_access_key}"
+    access_key = "${var.aws_access_key}"
     secret_key = "${var.aws_secret_key}"
   }
 }
