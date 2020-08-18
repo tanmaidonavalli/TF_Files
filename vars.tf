@@ -8,16 +8,6 @@ variable "AMIS" {
   
 }
 
-variable "ENV" {
-  type = "map"
-  default = {
-    dev     = "app1-dev"
-    qa      = "app1-qa"
-    staging = "app1-staging"
-    prod    = "app1-prod"
-  }
-}
-
 
 variable "aws_access_key" {
   type = string
@@ -33,6 +23,3 @@ variable "AWS_REGION" {
     default = "us-east-1"
 }
 
- variable "environment" {
-  description = “The cluster deployment environment”
-}
