@@ -1,6 +1,6 @@
 locals {
   env = {
-    app1-dev {
+    app1-dev = {
       name                    = "dev"
     }
 
