@@ -4,7 +4,6 @@ provider "aws" {
   secret_key = var.aws_secret_key
 }
 
-workspace = "${local.env[terraform.workspace]}"
 resource "aws_instance" "instance1" {
   #count = 2
   ami = "${lookup(var.AMIS, var.AWS_REGION)}"
