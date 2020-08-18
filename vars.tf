@@ -8,6 +8,17 @@ variable "AMIS" {
   
 }
 
+variable "workspace_to_environment_map" {
+  type = "map"
+  default = {
+    dev     = "dev"
+    qa      = "qa"
+    staging = "staging"
+    prod    = "prod"
+  }
+}
+
+
 variable "aws_access_key" {
   type = string
   description = "AWS access key"
