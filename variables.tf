@@ -1,4 +1,4 @@
-variable "project_name" {
+variable "name" {
   type        = map
   description = "Name of the project."
   default     = {
