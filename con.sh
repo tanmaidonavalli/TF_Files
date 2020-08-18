@@ -11,7 +11,7 @@
 
 if [[ ${EXEC} == "plan" ]]
 then
-terraform plan -var-file="${ENV}.tfvars" -out="${ENV}.tfplan"
+terraform plan -out="${ENV}.tfplan"
 fi
 
 if [[ ${EXEC} == "apply" ]]
