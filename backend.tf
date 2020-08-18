@@ -10,7 +10,7 @@ terraform {
 data "terraform_remote_state" "state" {
   backend = "s3"
   config {
-    bucket     = "${lookup(var.project_name, var.env)}-${random_id.tf_bucket_id.dec}"
-    dynamodb_table = "${lookup(var.project_name, var.env)}-${random_id.tf_bucket_id.dec}"
+    bucket     = "${var.project_name}"
+    dynamodb_table = "${var.project_name}"
   }
 }
