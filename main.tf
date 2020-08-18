@@ -33,15 +33,14 @@ tags {
   }
 }
 
-# store tfstate in s3 and locking information in DynamoDB
 terraform {
   backend "s3" {
-    encrypt = true
-    # cannot contain interpolations
-    # bucket = "${aws_s3_bucket.terraform-state-storage-s3.bucket}"
-    bucket = "app1-dev-44207"
-    # region = "${aws_s3_bucket.terraform-state-storage-s3.region}"
-    # dynamodb_table = "example-iac-terraform-state-lock-dynamo"
-    key = "terraform.tfstate"
+    # Replace this with your bucket name!
+    bucket         = "terraform-state-dev2022"
+    key            = "app1-dev/terraform.tfstate"
+    region         = "us-east-2"
+    # Replace this with your DynamoDB table name!
+    dynamodb_table = "terraform-up-and-running-locks"
+    encrypt        = true
   }
 }
