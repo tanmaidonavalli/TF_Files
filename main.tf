@@ -5,7 +5,7 @@ resource "random_id" "tf_bucket_id" {
 
 # Create the bucket
 resource "aws_s3_bucket" "tf_code" {
-  bucket = "$(var.project_name)"
+  bucket = "app1-dev"
   acl    = "private"
 
   force_destroy = true
@@ -27,19 +27,16 @@ attribute {
 }
 
 terraform {
-  backend "s3" {}
-
-  }
-
-data "terraform_remote_state" "state" {
-  backend = "s3"
-  config {
-    bucket     = "${var.project_name}"
-    key            = "terraform.tfstate"
-    region         = "us-east-1"
+  backend "s3" {
+    
+    # Replace this with your bucket name!
+    bucket         = "app1-dev"
+    key            = "global/s3/terraform.tfstate"
+    region         = "us-east-2"
     # Replace this with your DynamoDB table name!
     dynamodb_table = "terraform-up-and-running-locks"
     encrypt        = true
+     
+    }
+
   }
-}
-    
