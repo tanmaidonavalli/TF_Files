@@ -41,8 +41,7 @@ terraform {
     # bucket = "${aws_s3_bucket.terraform-state-storage-s3.bucket}"
     bucket = "app1-dev-44207"
     # region = "${aws_s3_bucket.terraform-state-storage-s3.region}"
-    region = ""
     # dynamodb_table = "example-iac-terraform-state-lock-dynamo"
-    key = "terraform-state/terraform.tfstate"
+    key = "terraform.tfstate"
   }
 }
