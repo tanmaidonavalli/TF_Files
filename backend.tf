@@ -2,17 +2,11 @@
 terraform {
   backend "s3" {
     key            = "terraform.tfstate"
+    bucket     = "app1-dev"
+    dynamodb_table = "app1-dev"
     region         = "us-east-1"
     encrypt        = true
     }
-}
-
-data "terraform_remote_state" "state" {
-  backend = "s3"
-  config {
-    bucket     = var.name
-    dynamodb_table = var.name
-  }
 }
 
 resource "aws_dynamodb_table" "dynamodb-terraform-state-lock" {
