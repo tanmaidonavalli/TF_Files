@@ -33,7 +33,7 @@ terraform {
     
     bucket         = "app1-dev-47577"
     key            = "dev/terraform.tfstate"
-    region         = "us-east-2"
+    region         = "us-east-1"
     dynamodb_table = "terraform-up-and-running-locks"
     encrypt        = true
     access_key = "$var.aws_access_key}"
