@@ -10,8 +10,8 @@ terraform {
 data "terraform_remote_state" "state" {
   backend = "s3"
   config {
-    bucket     = "app1-dev"
-    dynamodb_table = "app1-dev"
+    bucket     = var.name
+    dynamodb_table = var.name
   }
 }
 
