@@ -24,9 +24,5 @@ attribute {
     name = "LockID"
     type = "S"
   }
-  
-tags {
-    Name = "DynamoDB Terraform State Lock Table"
-  }
 }
 
