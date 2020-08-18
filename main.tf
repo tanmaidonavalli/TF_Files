@@ -26,17 +26,20 @@ attribute {
   }
 }
 
-
-
 terraform {
-  backend "s3" {
-    
-    bucket         = "${var.project_name}"
+  backend "s3" {}
+
+  }
+
+data "terraform_remote_state" "state" {
+  backend = "s3"
+  config {
+    bucket     = "${var.project_name}"
     key            = "terraform.tfstate"
     region         = "us-east-1"
+    # Replace this with your DynamoDB table name!
     dynamodb_table = "terraform-up-and-running-locks"
     encrypt        = true
-    access_key = "${var.aws_access_key}"
-    secret_key = "${var.aws_secret_key}"
   }
 }
+    
