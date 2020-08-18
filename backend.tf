@@ -1,9 +1,16 @@
+
 terraform {
   backend "s3" {
-    bucket         = "app1-dev-12795"
     key            = "terraform.tfstate"
     region         = "us-east-1"
-    #dynamodb_table = "terraform-state-lock-app1dev"
     encrypt        = true
+    }
+}
+
+data "terraform_remote_state" "state" {
+  backend = "s3"
+  config {
+    bucket     = "${lookup(var.project_name, var.env)}-${random_id.tf_bucket_id.dec}"
+    dynamodb_table = "${lookup(var.project_name, var.env)}-${random_id.tf_bucket_id.dec}"
   }
 }
