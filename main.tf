@@ -33,14 +33,3 @@ tags {
   }
 }
 
-terraform {
-  backend "s3" {
-    # Replace this with your bucket name!
-    bucket         = "app1-dev-44207"
-    key            = "app1-dev/terraform.tfstate"
-    region         = "us-east-2"
-    # Replace this with your DynamoDB table name!
-    dynamodb_table = "terraform-up-and-running-locks"
-    encrypt        = true
-  }
-}
