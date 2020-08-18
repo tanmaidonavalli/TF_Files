@@ -5,7 +5,7 @@
  EXEC="${2}"
  terraform init 
  config-lint -terraform .
- (terraform workspace new "${ENV}" && terraform workspace select "${ENV}")
+ terraform workspace new "${ENV}" 
  terraform init
  terraform validate
 
