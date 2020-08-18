@@ -1,7 +1,3 @@
-# Declare the aws provider
-
-  
-
 # Create a random id
 resource "random_id" "tf_bucket_id" {
   byte_length = 2
@@ -28,6 +24,7 @@ attribute {
     name = "LockID"
     type = "S"
   }
+  
 tags {
     Name = "DynamoDB Terraform State Lock Table"
   }
