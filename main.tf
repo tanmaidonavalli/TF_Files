@@ -5,7 +5,7 @@ resource "random_id" "tf_bucket_id" {
 
 # Create the bucket
 resource "aws_s3_bucket" "tf_code" {
-  bucket = "${lookup(var.project_name, var.env)}-${random_id.tf_bucket_id.dec}"
+  bucket = "${var.project_name}"
   acl    = "private"
 
   force_destroy = true
@@ -16,7 +16,7 @@ resource "aws_s3_bucket" "tf_code" {
 }
 
 resource "aws_dynamodb_table" "dynamodb-terraform-state-lock" {
- name = "terraform-state-lock-app1dev"
+ name = "${var.project_name}"
   hash_key = "LockID"
   read_capacity = 20
   write_capacity = 20
