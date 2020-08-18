@@ -8,7 +8,7 @@ variable "AMIS" {
   
 }
 
-variable "workspace_to_environment_map" {
+variable "ENV" {
   type = "map"
   default = {
     dev     = "app1-dev"
