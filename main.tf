@@ -13,7 +13,7 @@ resource "aws_s3_bucket" "tf_code" {
 }
 
 resource "aws_dynamodb_table" "dynamodb-terraform-state-lock" {
- name = var.name
+ name = "app1-dev"
   billing_mode = "PAY_PER_REQUEST"
   hash_key     = "LockID"
   
