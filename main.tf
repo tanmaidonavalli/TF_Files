@@ -5,7 +5,7 @@ resource "random_id" "tf_bucket_id" {
 
 # Create the bucket
 resource "aws_s3_bucket" "tf_code" {
-  bucket = ""
+  bucket = "bucket = "${lookup(var.project_name, var.env)}-${random_id.tf_bucket_id.dec}"
   acl    = "private"
 
   force_destroy = true
@@ -31,7 +31,7 @@ attribute {
 terraform {
   backend "s3" {
     
-    bucket         = "app1-dev-47577"
+    bucket         = "${lookup(var.project_name, var.env)}-${random_id.tf_bucket_id.dec}"
     key            = "terraform.tfstate"
     region         = "us-east-1"
     dynamodb_table = "terraform-up-and-running-locks"
