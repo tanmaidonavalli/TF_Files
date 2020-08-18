@@ -13,3 +13,12 @@ variable "aws_region" {
 variable "env" {
   description = "env: dev or prod"
 }
+
+variable "aws_access_key {
+type = string
+
+}
+
+variable "aws_secret_key" {
+type = string
+}
