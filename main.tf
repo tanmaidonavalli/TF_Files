@@ -5,7 +5,7 @@ resource "random_id" "tf_bucket_id" {
 
 # Create the bucket
 resource "aws_s3_bucket" "tf_code" {
-  bucket = "app1-dev-47577"
+  bucket = ""
   acl    = "private"
 
   force_destroy = true
