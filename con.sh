@@ -8,9 +8,9 @@
  #terraform plan -out="app1-dev.tfplan
  #terraform apply "app1-dev.tfplan"
  
-ENV="${terraform.workspace}"
+
 terraform workspace list 
-terraform workspace select $ENV  || (terraform workspace new $ENV && terraform workspace select $ENV)
+terraform workspace select $terraform.workspace  || (terraform workspace new $terraform.workspace && terraform workspace select $terraform.workspace)
 
 
 
