@@ -8,7 +8,7 @@
  #terraform plan -out="app1-dev.tfplan
  #terraform apply "app1-dev.tfplan"
  
-ENV="app1-UAT"
+ENV="app1-preprod"
 terraform workspace list 
 terraform workspace select $ENV  || (terraform workspace new $ENV && terraform workspace select $ENV)
 
