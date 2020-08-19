@@ -7,7 +7,7 @@
  #terraform validate
  #terraform plan -out="app1-dev.tfplan
  #terraform apply "app1-dev.tfplan"
-
+terraform workspace list 
 (terraform workspace new "app1-prod" && terraform workspace select "app1-prod") || terraform workspace select "app1-dev" 
 
 
