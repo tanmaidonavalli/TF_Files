@@ -1,7 +1,7 @@
 #!/bin/bash
  
  #terraform init
- #terraform workspace new "app1-dev"
+ #terraform workspace new "app1-prepod"
  
  #config-lint -terraform .
  #terraform validate
