@@ -1,16 +1,9 @@
 locals {
-  app_name       = "workspaces-app"
-  profile_prefix = "tf-tutorial-workspaces"
-}
-
-locals {
- region = {
+  app_name       = "app1workspace"
+  environment = "${terraform.workspace}"
+  region = {
   "app1-dev" = "us-east-1"
 }
-  }
-
-locals {
-  environment = "${terraform.workspace}"
 }
 
 locals {
