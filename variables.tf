@@ -24,7 +24,3 @@ variable "aws_secret_key" {
   description = "AWS secret key"
 }
 
-variable "env" {
-  description = "env: dev or prod"
-}
-
