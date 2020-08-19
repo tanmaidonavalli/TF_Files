@@ -1,5 +1,5 @@
 locals {
-  app_name       = "application1"
+  app_name    = "application1"
   environment = "${terraform.workspace}"
   region = {
     
