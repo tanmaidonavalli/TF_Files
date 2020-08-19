@@ -3,7 +3,7 @@ locals {
   environment = "${terraform.workspace}"
   region = {
     
-  "app1-dev" = "us-east-1"
+  "app1-dev" = "us-east-2"
     "app1-prepod" = "us-east-1"
 }
 }
