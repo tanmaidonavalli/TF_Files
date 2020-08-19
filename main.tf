@@ -8,14 +8,10 @@ resource "aws_s3_bucket" "bucket" {
   }
   tags = local.common_tags
 }
-
-resource "aws_instance" "instance1" {
-  ami = "ami-085925f297f89fce1"
-  instance_type = "t2.micro"
+resource "aws_s3_bucket" "bucketdemo" {
+  bucket = "bucketdemo"
+  acl    = "private"
+  force_destroy = true
   
-
-  tags = {
-      Name = "tinstance"
-  }
+  tags = local.common_tags
 }
-
