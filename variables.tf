@@ -4,13 +4,6 @@ locals {
 }
 
 locals {
-  profile = {
-    "development" = "${local.profile_prefix}-development"
-    "qa"          = "${local.profile_prefix}-qa"
-    "staging"     = "${local.profile_prefix}-staging"
-    "production"  = "${local.profile_prefix}-production"
-  }
-  
  region = {
   "app1-dev" = "us-east-1"
 }
