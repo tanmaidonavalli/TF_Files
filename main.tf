@@ -1,15 +1,13 @@
 
-
-# Create the bucket
-resource "aws_s3_bucket" "tf_code" {
-  bucket = "application1-dev"
+resource "aws_s3_bucket" "bucket" {
+  bucket = "${local.name_prefix}"
   acl    = "private"
-
+  region = "${lookup(local.region, local.environment)}"
   force_destroy = true
-
-  tags = {
-    Name = "tf_bucket"
+  versioning {
+    enabled = true
   }
+  tags = local.common_tags
 }
 
 
