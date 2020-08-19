@@ -13,7 +13,7 @@ locals {
     Terraform   = "true"
     Environment = local.environment
   }
-  name_prefix = "${local.app_name}-${local.environment}"
+  name_prefix = "${local.app_name}"
 }
 
 variable "aws_access_key" {
