@@ -1,17 +1,31 @@
-variable "name" {
-  type        = map
-  description = "Name of the project."
-  default     = {
-    dev  = "app1-dev"
-    prod = "app1-prod"
+locals {
+  app_name       = "workspaces-app"
+  profile_prefix = "tf-tutorial-workspaces"
+}
+
+locals {
+  profile = {
+    "development" = "${local.profile_prefix}-development"
+    "qa"          = "${local.profile_prefix}-qa"
+    "staging"     = "${local.profile_prefix}-staging"
+    "production"  = "${local.profile_prefix}-production"
   }
+  
+ region = {
+  "app1-dev" = "us-east-1"
+}
+  }
+
+locals {
+  environment = "${terraform.workspace}"
 }
 
-variable "aws_region" {
-}
-
-variable "env" {
-  description = "env: dev or prod"
+locals {
+  common_tags = {
+    Terraform   = "true"
+    Environment = local.environment
+  }
+  name_prefix = "${local.app_name}-${local.environment}"
 }
 
 variable "aws_access_key" {
@@ -23,3 +37,8 @@ variable "aws_secret_key" {
   type = string
   description = "AWS secret key"
 }
+
+variable "env" {
+  description = "env: dev or prod"
+}
+
