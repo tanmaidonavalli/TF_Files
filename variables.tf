@@ -1,13 +1,24 @@
 locals {
   app_name    = "application1"
   environment = "${terraform.workspace}"
-  region = {
+  locals {
+    context_variables = {
     
-  "app1-dev" = "us-east-2"
-    "app1-prepod" = "us-east-1"
+    "app1-dev" =
+        {
+        region =  "us-east-2"
+          
+          }
+      
+    "app1-prepod" =
+        
+      {
+        region = "us-east-1"
+        }
+        }
 }
-}
-
+region = "${lookup(local.context_variables[terraform.workspace],"region")}"
+  
 locals {
   common_tags = {
     Terraform   = "true"
