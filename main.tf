@@ -1,6 +1,6 @@
 
 resource "aws_s3_bucket" "workspacesdemo" {
-  bucket = "bucketforworkspacestate"
+  bucket = "bucketforstatestoring"
   acl    = "private"
   force_destroy = true
   versioning {
