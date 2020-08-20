@@ -5,7 +5,17 @@ terraform workspace list
 terraform workspace select $ENV  || (terraform workspace new $ENV && terraform workspace select $ENV)
 workspace=$(terraform workspace show)
 echo "current workspace is $workspace"
-config-lint -terraform .
+
+
+
+
+
+
+
+
+
+
+#config-lint -terraform .
 
 
 
