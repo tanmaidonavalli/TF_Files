@@ -4,12 +4,12 @@ locals {
  }
  locals {
     context_variables = {
-     app1dev =
+     dev =
         {
         region =  "us-east-2"
           }
       
-    app1prepod =
+    prepod =
         
       {
         region = "us-east-1"
