@@ -13,7 +13,7 @@ locals {
         }
         }
 
-region = "${lookup(local.context_variables[terraform.workspace],"region")}"
+region = "${lookup(local.context_variables[local.environment],"region")}"
    }
   
 locals {
