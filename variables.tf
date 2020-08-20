@@ -1,7 +1,8 @@
 locals {
   app_name    = "application1"
   environment = "${terraform.workspace}"
-  locals {
+ }
+ locals {
     context_variables = {
     
     "app1-dev" =
