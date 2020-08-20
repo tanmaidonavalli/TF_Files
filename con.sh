@@ -1,6 +1,6 @@
 #!/bin/bash 
-ENV="app1-dev"
-ENV="app1-prod"
+#ENV="app1-dev"
+#ENV="app1-prod"
 
 declare -a StringArray=("app1-dev","app1-prod","app1-staging")
  
