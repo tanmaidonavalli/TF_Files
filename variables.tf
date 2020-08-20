@@ -4,14 +4,11 @@ locals {
  }
  locals {
     context_variables = {
-     dev =
-        {
-        region =  "us-east-2"
-          }
+     dev = {
+     region =  "us-east-2"
+    }
       
-    prepod =
-        
-      {
+    prepod = {
         region = "us-east-1"
         }
         }
