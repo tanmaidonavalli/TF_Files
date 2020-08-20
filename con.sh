@@ -1,6 +1,11 @@
 #!/bin/bash 
 ENV="app1-dev"
 
+terraform workspace list 
+terraform workspace select $ENV  || (terraform workspace new $ENV && terraform workspace select $ENV)
+workspace=$(terraform workspace show)
+echo "current workspace is $workspace"
+
 config-lint -terraform . | tee -a "log.txt"
 if [[ "$(cat log.txt | grep -c "FAILURE")" -ne 0 ]]; then
               echo "Failure seen in log file exiting"
@@ -14,10 +19,7 @@ if [[ "$(cat log.txt | grep -c "FAILURE")" -ne 0 ]]; then
   
   fi
   
-terraform workspace list 
-terraform workspace select $ENV  || (terraform workspace new $ENV && terraform workspace select $ENV)
-workspace=$(terraform workspace show)
-echo "current workspace is $workspace"
+
 
 
 
