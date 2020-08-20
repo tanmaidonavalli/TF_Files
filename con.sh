@@ -1,16 +1,10 @@
 #!/bin/bash 
-#ENV="app1-dev"
-#ENV="app1-prod"
+ENV="app1-dev"
 
-declare -a StringArray=("app1-dev","app1-prod","app1-staging")
- 
-# Iterate the string array using for loop
-for val in ${StringArray[@]}; do
 terraform workspace list 
 terraform workspace select $ENV  || (terraform workspace new $ENV && terraform workspace select $ENV)
 workspace=$(terraform workspace show)
 echo "current workspace is $workspace"
-done
 
 
 
