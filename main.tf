@@ -1,6 +1,6 @@
 
-resource "aws_s3_bucket" "workspacedemo" {
-  bucket = "samplebucketfordemo"
+resource "aws_s3_bucket" "workspacesdemo" {
+  bucket = "bucketfordemo"
   acl    = "private"
   force_destroy = true
   versioning {
