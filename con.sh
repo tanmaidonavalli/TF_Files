@@ -13,6 +13,14 @@ ENV="app1-preprod"
 
 terraform workspace list 
 terraform workspace select $ENV  || (terraform workspace new $ENV && terraform workspace select $ENV)
+workspace=$(terraform workspace show)
+echo "current workspace is $workspace"
+tfvars_file="$workspace.tfvars"
+if test -f $tfvars_file; then
+echo "found $tfvard_file, applying"
+terraform apply -var-file=$workspace.tfvars
+else echo "cannot find $tfvars_file"
+fi
 
 
 
