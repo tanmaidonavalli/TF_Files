@@ -17,8 +17,9 @@ locals {
         region = "us-east-1"
         }
         }
-}
+
 region = "${lookup(local.context_variables[terraform.workspace],"region")}"
+   }
   
 locals {
   common_tags = {
