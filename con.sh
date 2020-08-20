@@ -1,6 +1,6 @@
 #!/bin/bash 
 ENV="app1-stage"
-
+config-lint -terraform .
 terraform workspace list 
 terraform workspace select $ENV  || (terraform workspace new $ENV && terraform workspace select $ENV)
 workspace=$(terraform workspace show)
