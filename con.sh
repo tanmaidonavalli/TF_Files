@@ -8,7 +8,7 @@
  #terraform plan -out="app1-dev.tfplan
  #terraform apply "app1-dev.tfplan"
  
-ENV="app1-preprod"
+ENV="preprod"
 #ENV=(app1-prod,app1-dev,app1-uat,app1-stage)
 
 terraform workspace list 
