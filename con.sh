@@ -1,5 +1,5 @@
 #!/bin/bash 
-ENV="app1-prod"
+ENV="app1-dev"
 
 terraform workspace list 
 terraform workspace select $ENV  || (terraform workspace new $ENV && terraform workspace select $ENV)
