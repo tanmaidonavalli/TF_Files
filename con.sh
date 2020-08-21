@@ -9,14 +9,14 @@ echo "current workspace is $workspace"
 
 config-lint -terraform . | tee -a "log.txt"
 if [[ "$(cat log.txt | grep -c "FAILURE")" -ne 0 ]]; then
-              echo "Failure seen in log file exiting"
+              echo "EXITING BECAUSE FAILURE IN CONFIG-LINT LOG FILE"
  exit 1
  fi
 
  if [[ "$(cat log.txt | grep -c "WARNING")" -ne 0 ]]; then
-          echo "Warning seen in log file. Please check the code"
+          echo "WARNING SEEN IN LOG FILE. PLEASE CHECK THE CODE"
  else
-          echo "Wohooo no errors in config-lint log"
+          echo "NO ERRORS IN LOG FILE"
   
   fi
   
