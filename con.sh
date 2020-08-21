@@ -1,4 +1,5 @@
 #!/bin/bash 
+#Use environment variables when integrating with CI/CD 
 ENV="app1-stage"
 
 terraform workspace list 
