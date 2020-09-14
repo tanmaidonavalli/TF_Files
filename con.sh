@@ -1,6 +1,6 @@
 #!/bin/bash 
 #Use environment variables when integrating with CI/CD 
-ENV="app2-dev"
+ENV="app2-test"
 
 terraform workspace list 
 terraform workspace select $ENV  || (terraform workspace new $ENV && terraform workspace select $ENV)
